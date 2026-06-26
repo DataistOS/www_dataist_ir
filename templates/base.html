@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config.title }}</title>
+    <link href="https://v1.fontapi.ir/css/Vazirmatn" rel="stylesheet">
+    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+</head>
+<body>
+
+<nav>
+    <a href="/">خانه</a>
+    <a href="https://donate.dataist.ir">حمایت</a>
+    <a href="https://idna.dataist.ir">ثبت نام</a>
+    <a href="https://dpic.dataist.ir">مستندات</a>
+    <a href="https://status.dataist.ir/status/heuristic">مانیتورینگ</a>
+    <a href="https://github.com/DataistOS">گیت هاب</a>
+    <a href="https://www.instagram.com/dataist_ir">اینستاگرام</a>
+    <a href="https://t.me/DataistLinux">تلگرام</a>
+</nav>
+
+<main>
+    {% block content %}{% endblock content %}
+</main>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>تمامی حقوق مادی و معنوی این مجموعه برای شرکت نرم افزاری آزاداندیش داده ساز محفوظ است.</p>
+        <a href="https://next.dataist.ir/u/ftdc">پروفایل سازمانی (Next)</a>
+    </div>
+    <div class="site-version">
+        Version: {{ config.extra.site_version }}
+    </div>
+</footer>
+
+</body>
+</html>

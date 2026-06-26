@@ -1,0 +1,15 @@
+base_url = "http://127.0.0.1:1111"
+title = "توزیع دیتائیست (Dataist OS)"
+description = "Linux distribution focused on data analysis, self-quantification, and digital sovereignty."
+default_language = "fa"
+compile_sass = true
+build_search_index = false
+
+[languages.fa]
+taxonomies = [
+    { name = "categories" },
+    { name = "tags" }
+]
+
+[extra]
+site_version = "0.0.1"

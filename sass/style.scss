@@ -1,0 +1,74 @@
+/* Main stylesheet for Dataist OS dark theme */
+
+$bg-color: #080808;
+$primary-color: #00d4ff;
+$text-color: #f0f0f0;
+$nav-bg: rgba(15, 15, 15, 0.95);
+
+body {
+    background-color: $bg-color;
+    color: $text-color;
+    font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+main { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+/* Navigation */
+nav {
+    position: sticky; top: 0; z-index: 1000;
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 20px; padding: 15px; border-bottom: 1px solid #333;
+    background: $nav-bg; backdrop-filter: blur(10px);
+    a { color: $primary-color; text-decoration: none; font-weight: bold; white-space: nowrap; transition: 0.3s; }
+    a:hover { color: #fff; text-decoration: underline; }
+}
+
+/* Hero section */
+.hero-container { padding: 40px 20px; }
+.glitch-title { color: $primary-color; font-size: 2em; margin-bottom: 15px; }
+
+.data-stream-text {
+    font-family: 'Courier New', monospace;
+    color: #888;
+    .status-ok { color: #00ff88; font-weight: bold; }
+}
+
+.typing-effect {
+    display: inline-block;
+    border-left: 3px solid $primary-color;
+    padding-left: 5px;
+    animation: typing 3s steps(40, end), blink 0.75s infinite;
+    white-space: nowrap; overflow: hidden;
+}
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink { 50% { border-color: transparent } }
+
+.manifesto-text {
+    margin-top: 30px; font-size: 1.15em; color: #e0e0e0;
+    text-align: justify; line-height: 1.9;
+    border-right: 2px solid $primary-color; padding-right: 20px;
+    p { margin-bottom: 20px; }
+}
+
+/* Services section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px; margin-top: 30px;
+}
+
+.service-card {
+    display: flex; flex-direction: column; align-items: center; padding: 20px;
+    background: #151515; border: 1px solid #333; color: $primary-color;
+    text-decoration: none; border-radius: 8px; transition: 0.3s;
+    &:hover { background: #202020; transform: translateY(-3px); border-color: $primary-color; }
+}
+
+.card-icon { font-family: monospace; display: block; margin-bottom: 8px; color: #0088aa; }
+
+.site-footer {
+    margin-top: 50px; padding: 20px; border-top: 1px solid #333;
+    text-align: center; color: #666; font-size: 0.85em;
+}
