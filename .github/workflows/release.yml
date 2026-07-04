@@ -1,0 +1,31 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync Version to Config
+        run: |
+          VERSION=$(cat VERSION)
+          sed -i "s/site_version = \".*\"/site_version = \"$VERSION\"/" config.toml
+          echo "Synced version to $VERSION"
+
+      - name: Create ZIP
+        run: |
+          VERSION=$(cat VERSION)
+          zip -r WWW_DATAIST_IR-$VERSION.zip . -x "*.git*" "_build/*" "tests/*" "venv/*"
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: CHANGELOG.md
+          files: WWW_DATAIST_IR-*.zip
