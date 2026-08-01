@@ -1,7 +1,4 @@
-base_url = "http://dataist.ir"
-# base_url = "http://dataist.ir"
-# base_url = "http://127.0.0.1:1111"
-
+base_url = "https://dataist.ir"
 title = "توزیع دیتائیست (Dataist OS)"
 description = "Linux distribution focused on data analysis, self-quantification, and digital sovereignty."
 default_language = "fa"
@@ -15,4 +12,4 @@ taxonomies = [
 ]
 
 [extra]
-site_version = "0.0.2"
+site_version = "0.0.3"

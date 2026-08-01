@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ config.description }}">
     <title>{{ config.title }}</title>
     <link href="https://v1.fontapi.ir/css/Vazirmatn" rel="stylesheet">
     <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
 </head>
 <body>
 
-<nav>
-    <a href="/">خانه</a>
-    <a href="https://donate.dataist.ir">حمایت</a>
-    <a href="https://idna.dataist.ir">ثبت‌نام</a>
-    <a href="https://dpic.dataist.ir">مستندات</a>
-    <a href="https://status.dataist.ir/status/heuristic">مانیتورینگ</a>
-    <a href="https://github.com/DataistOS">گیت‌هاب</a>
-    <a href="https://www.instagram.com/dataist_ir">اینستاگرام</a>
-    <a href="https://t.me/DataistLinux">تلگرام</a>
-</nav>
+<header>
+    <nav>
+        <a href="/">خانه</a>
+        <a href="https://donate.dataist.ir" rel="noopener noreferrer">حمایت</a>
+        <a href="https://idna.dataist.ir" rel="noopener noreferrer">ثبت‌نام</a>
+        <a href="https://dpic.dataist.ir" rel="noopener noreferrer">مستندات</a>
+        <a href="https://status.dataist.ir/status/heuristic" rel="noopener noreferrer">مانیتورینگ</a>
+        <a href="https://github.com/DataistOS" target="_blank" rel="noopener noreferrer">گیت‌هاب</a>
+        <a href="https://www.instagram.com/dataist_ir" target="_blank" rel="noopener noreferrer">اینستاگرام</a>
+        <a href="https://t.me/DataistLinux" target="_blank" rel="noopener noreferrer">تلگرام</a>
+    </nav>
+</header>
 
 <main>
     {% block content %}{% endblock content %}
@@ -27,7 +30,7 @@
 <footer class="site-footer">
     <div class="footer-content">
         <p>تمامی حقوق مادی و معنوی این مجموعه برای شرکت نرم افزاری آزاداندیش داده ساز محفوظ است.</p>
-        <a href="https://next.dataist.ir/u/ftdc">پروفایل سازمانی (Next)</a>
+        <a href="https://next.dataist.ir/u/ftdc" target="_blank" rel="noopener noreferrer">پروفایل سازمانی (Next)</a>
     </div>
     <div class="site-version">
         Version: {{ config.extra.site_version }}
