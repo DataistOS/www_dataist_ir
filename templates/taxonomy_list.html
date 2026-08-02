@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-container" style="padding: 40px 20px;">
+    <div class="hero-content">
+        <h1 class="glitch-title">&lt; تگ‌های اکوسیستم /&gt;</h1>
+    </div>
+</div>
+
+<div class="services-container" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+    <div class="services-grid" style="display: flex; flex-direction: column; gap: 15px;">
+        {% for term in terms %}
+        <a href="{{ term.permalink }}" class="service-card"
+           style="text-align: right; padding: 15px; display: block; text-decoration: none;">
+            <strong style="color: var(--accent-color, #00ffff);">{{ term.name }}</strong>
+            <span style="font-size: 0.85rem; opacity: 0.8; float: left;">({{ term.pages | length }} مطلب)</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

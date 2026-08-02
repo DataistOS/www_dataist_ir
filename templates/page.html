@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-container" style="padding: 40px 20px;">
+    <div class="hero-content">
+        <h1 class="glitch-title">&lt; {{ page.title }} /&gt;</h1>
+        <p class="data-stream-text">&gt; Published on: <span
+                class="status-ok">{{ page.date }}</span></p>
+    </div>
+</div>
+
+<div class="services-container"
+     style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: right;">
+    <div class="service-card" style="padding: 30px; display: block; line-height: 1.8;">
+
+        <div class="article-content" style="font-size: 1.05rem; opacity: 0.9;">
+            {{ page.content | safe }}
+        </div>
+
+        <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+            <a href="/news"
+               style="color: var(--accent-color, #00ffff); text-decoration: none; font-size: 0.9rem;">
+                &larr; بازگشت به لیست اخبار
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

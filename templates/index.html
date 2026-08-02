@@ -16,9 +16,23 @@
                 <strong>فلسفه دیتائیسم:</strong> دیتائیسم جهان را جریانی از داده‌ها می‌بیند. با یادگیری رصد، ذخیره و تحلیل این جریان، به قدرتی دست می‌یابید که پیش از این جادو به نظر می‌رسید. ما در دیتائیست، کار با داده‌ها را در دو لایه موازی پیش می‌بریم: «خودشناسی داده‌محور» برای بهینه‌سازی زندگی فردی و «تحلیل رفتار» جهت شناخت عمیق ردپای دیجیتال.
             </p>
             <p>
-                <strong>چشم‌انداز اکوسیستم:</strong> دیتائیست یک اکوسیستم متن‌باز و جامعه‌محور است که هدف آن تلفیق مفاهیم پیشرفته سیستم‌عامل لینوکس، مهندسی داده، توسعه نرم‌افزار و ابزارهای تخصصی است. این پروژه، ترکیبی از یک توزیع اختصاصی لینوکس و یک آکادمی آموزشی برای تربیت متخصصین عصر داده است.
+                <strong>چشم‌انداز اکوسیستم:</strong> دیتائیست نه تنهای یک توزیع لینوکسی بلکه یک اکوسیستم متن‌باز و جامعه‌محور است که هدف آن تلفیق مفاهیم پیشرفته سیستم‌عامل لینوکس، مهندسی داده، توسعه نرم‌افزار و ابزارهای تخصصی است. این پروژه، ترکیبی از یک توزیع اختصاصی لینوکس و یک آکادمی آموزشی برای تربیت متخصصین عصر داده است.
             </p>
         </div>
+    </div>
+</div>
+
+<div class="services-container">
+    <h2>&lt; آخرین اخبار و اطلاعیه‌ها /&gt;</h2>
+    <div class="services-grid" style="display: flex; flex-direction: column; gap: 15px;">
+        {% set news_section = get_section(path="news/_index.md") %}
+        {% for page in news_section.pages | slice(end=3) %}
+        <a href="{{ page.permalink }}" class="service-card" style="text-align: right; padding: 20px; display: block; text-decoration: none;">
+            <span class="card-icon" style="float: left; font-size: 0.8rem;">{{ page.date }}</span>
+            <strong style="color: var(--accent-color, #00ffff); display: block; margin-bottom: 8px;">{{ page.title }}</strong>
+            <span style="font-size: 0.9rem; opacity: 0.85; line-height: 1.6;">{{ page.description }}</span>
+        </a>
+        {% endfor %}
     </div>
 </div>
 
@@ -41,6 +55,7 @@
     <div class="services-grid">
         <a href="https://donate.dataist.ir" class="service-card" rel="noopener noreferrer"><span class="card-icon">0100$</span>حمایت مالی</a>
         <a href="https://idna.dataist.ir" class="service-card" rel="noopener noreferrer"><span class="card-icon">1101ID</span>احراز هویت</a>
+        <a href="https://github.com/DataistOS/dataiso/releases" class="service-card" target="_blank" rel="noopener noreferrer"><span class="card-icon">1100DL</span>دانلود</a>
         <a href="https://dpic.dataist.ir" class="service-card" rel="noopener noreferrer"><span class="card-icon">1011DOC</span>مستندات</a>
         <a href="https://status.dataist.ir/status/heuristic" class="service-card" rel="noopener noreferrer"><span class="card-icon">1110ST</span>مانیتورینگ</a>
         <a href="https://www.instagram.com/dataist_ir" class="service-card" target="_blank" rel="noopener noreferrer"><span class="card-icon">1001IG</span>اینستاگرام</a>

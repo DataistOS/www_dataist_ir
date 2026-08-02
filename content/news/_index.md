@@ -1,6 +1,7 @@
 +++
-# News section configuration
-title = "اخبار"
+title = "اخبار و اطلاعیه‌ها"
 sort_by = "date"
-template = "section.html"
+template = "news.html"
+page_template = "page.html"
+insert_anchor_links = "none"
 +++

@@ -10,16 +10,33 @@
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="/">خانه</a>
-        <a href="https://donate.dataist.ir" rel="noopener noreferrer">حمایت</a>
-        <a href="https://idna.dataist.ir" rel="noopener noreferrer">ثبت‌نام</a>
-        <a href="https://dpic.dataist.ir" rel="noopener noreferrer">مستندات</a>
-        <a href="https://status.dataist.ir/status/heuristic" rel="noopener noreferrer">مانیتورینگ</a>
-        <a href="https://github.com/DataistOS" target="_blank" rel="noopener noreferrer">گیت‌هاب</a>
-        <a href="https://www.instagram.com/dataist_ir" target="_blank" rel="noopener noreferrer">اینستاگرام</a>
-        <a href="https://t.me/DataistLinux" target="_blank" rel="noopener noreferrer">تلگرام</a>
+<header class="site-header">
+    <nav class="main-nav">
+
+        <div class="nav-right-group">
+            <a href="{{ get_url(path='') }}">خانه</a>
+            <a href="{{ get_url(path='news') }}">اخبار</a>
+            <a href="https://github.com/DataistOS/dataiso/releases" target="_blank"
+               rel="noopener noreferrer">دانلود</a>
+            <a href="https://donate.dataist.ir" target="_blank" rel="noopener noreferrer">حمایت</a>
+            <a href="https://dpic.dataist.ir" target="_blank" rel="noopener noreferrer">مستندات</a>
+            <a href="https://status.dataist.ir/status/heuristic" target="_blank"
+               rel="noopener noreferrer">مانیتورینگ</a>
+            <a href="https://github.com/DataistOS" target="_blank"
+               rel="noopener noreferrer">گیت‌هاب</a>
+            <a href="https://www.instagram.com/dataist_ir" target="_blank"
+               rel="noopener noreferrer">اینستاگرام</a>
+            <a href="https://t.me/DataistLinux" target="_blank" rel="noopener noreferrer">تلگرام</a>
+            <a href="https://next.dataist.ir/dataist" target="_blank" rel="noopener noreferrer">جامعه</a>
+            <a href="https://distrowatch.com" target="_blank"
+               rel="noopener noreferrer">دیستروواچ</a>
+        </div>
+
+        <div class="nav-left-item">
+            <a href="#" class="btn-lang" title="تغییر زبان">FA</a>
+            <a href="https://idna.dataist.ir" target="_blank" rel="noopener noreferrer"
+               class="btn-register">ثبت‌نام 💥️</a>
+        </div>
     </nav>
 </header>
 
@@ -29,8 +46,9 @@
 
 <footer class="site-footer">
     <div class="footer-content">
-        <p>تمامی حقوق مادی و معنوی این مجموعه برای شرکت نرم افزاری آزاداندیش داده ساز محفوظ است.</p>
-        <a href="https://next.dataist.ir/u/ftdc" target="_blank" rel="noopener noreferrer">پروفایل سازمانی (Next)</a>
+        <p>تمامی حقوق مادی و معنوی این مجموعه برای شرکت آزاداندیش داده ساز محفوظ است.</p>
+        <a href="https://next.dataist.ir/u/ftdc" target="_blank" rel="noopener noreferrer">پروفایل
+            سازمانی</a>
     </div>
     <div class="site-version">
         Version: {{ config.extra.site_version }}

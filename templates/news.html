@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-container" style="padding: 40px 20px;">
+    <div class="hero-content">
+        <h1 class="glitch-title">&lt; اخبار و اطلاعیه‌های دیتائیست /&gt;</h1>
+        <p class="data-stream-text">&gt; Loading latest updates and announcements...</p>
+    </div>
+</div>
+
+<div class="services-container" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+    <div class="services-grid" style="display: flex; flex-direction: column; gap: 20px;">
+        {% for page in section.pages %}
+        <div class="service-card" style="text-align: right; padding: 20px; display: block;">
+            <span class="card-icon" style="float: left; font-size: 0.8rem;">{{ page.date }}</span>
+            <h3 style="margin-bottom: 10px;">
+                <a href="{{ page.permalink }}"
+                   style="color: var(--accent-color, #00ffff); text-decoration: none;">{{ page.title
+                    }}</a>
+            </h3>
+            <p style="opacity: 0.85; font-size: 0.95rem; line-height: 1.6;">{{ page.description
+                }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

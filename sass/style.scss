@@ -15,14 +15,68 @@ body {
 
 main { max-width: 1000px; margin: 0 auto; padding: 20px; }
 
-/* Navigation */
 nav {
     position: sticky; top: 0; z-index: 1000;
-    display: flex; flex-wrap: wrap; justify-content: center;
-    gap: 20px; padding: 15px; border-bottom: 1px solid #333;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; padding: 15px 40px; border-bottom: 1px solid #333;
     background: $nav-bg; backdrop-filter: blur(10px);
-    a { color: $primary-color; text-decoration: none; font-weight: bold; white-space: nowrap; transition: 0.3s; }
-    a:hover { color: #fff; text-decoration: underline; }
+
+    .nav-right-group {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+.nav-left-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .btn-lang {
+            color: $primary-color;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 6px 10px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 4px;
+            transition: 0.3s;
+
+            &:hover {
+                border-color: $primary-color;
+                background-color: rgba(0, 212, 255, 0.1);
+            }
+        }
+
+        .btn-register {
+            background-color: rgba(0, 212, 255, 0.1);
+            border: 1px solid $primary-color;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $primary-color;
+                color: #080808 !important;
+                text-decoration: none !important;
+            }
+        }
+    }
+
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: bold;
+        white-space: nowrap;
+        transition: 0.3s;
+        font-size: 0.95rem;
+
+        &:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
 }
 
 /* Hero section */

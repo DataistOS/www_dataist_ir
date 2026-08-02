@@ -1,15 +1,12 @@
 base_url = "https://dataist.ir"
-title = "توزیع دیتائیست (Dataist OS)"
+title = "DataistOS"
 description = "Linux distribution focused on data analysis, self-quantification, and digital sovereignty."
 default_language = "fa"
 compile_sass = true
 build_search_index = false
 
 [languages.fa]
-taxonomies = [
-    { name = "categories" },
-    { name = "tags" }
-]
+taxonomies = [] # taxonomies = [ { name = "categories" }, { name = "tags" }
 
 [extra]
-site_version = "0.0.3"
+site_version = "0.0.4"
