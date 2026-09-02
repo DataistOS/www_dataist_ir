@@ -9,4 +9,4 @@ build_search_index = false
 taxonomies = [] # taxonomies = [ { name = "categories" }, { name = "tags" }
 
 [extra]
-site_version = "0.0.4"
+site_version = "0.1.0"

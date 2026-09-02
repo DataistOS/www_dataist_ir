@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ config.description }}">
-    <title>{{ config.title }}</title>
+    <meta name="enamad" content="40399694"/>
+    <title>{% block title %}{{ config.title }}{% endblock %}</title>
     <link href="https://v1.fontapi.ir/css/Vazirmatn" rel="stylesheet">
     <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
 </head>
@@ -47,6 +48,17 @@
 <footer class="site-footer">
     <div class="footer-content">
         <p>تمامی حقوق مادی و معنوی این مجموعه برای شرکت آزاداندیش داده ساز محفوظ است.</p>
+
+        <div class="enamad-container">
+            <a referrerpolicy='origin' target='_blank'
+               href='https://trustseal.enamad.ir/?id=7550684&Code=pZdiHyGT54MqHhVdtBegBe5eNus7JD9c'>
+                <img referrerpolicy='origin'
+                     src='https://trustseal.enamad.ir/logo.aspx?id=7550684&Code=pZdiHyGT54MqHhVdtBegBe5eNus7JD9c'
+                     alt='' style='cursor:pointer; width: 90px; height: auto;'
+                     code='pZdiHyGT54MqHhVdtBegBe5eNus7JD9c'>
+            </a>
+        </div>
+
         <a href="https://next.dataist.ir/u/ftdc" target="_blank" rel="noopener noreferrer">پروفایل
             سازمانی</a>
     </div>

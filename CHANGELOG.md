@@ -1,5 +1,15 @@
 # Changelog
 
+## [v0.1.0] - 2026-09-02
+### Added
+* **Official Enamad Integration (`base.html`, `style.scss`):**
+  * Added the official trust seal logo and verification meta tag to the site footer.
+  * Optimized footer layout and styling with a clean flexbox column structure for proper alignment of copyright, institutional profile, and the Enamad badge.
+* **Ecosystem Tools Integration (`data/tools.json`):**
+  * Synchronized and updated the central data registry for ecosystem tools, ensuring accurate cards and metadata display on the homepage.
+* **Version Management (`VERSION`):**
+  * Bumped project version to `v0.1.0` to mark the first major milestone release.
+  
 ## [v0.0.4] - 2026-08-02
 ### Added
 * **Site Navigation Update (`base.html`):**
