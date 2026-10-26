@@ -1,5 +1,14 @@
 # Changelog
 
+- ## [v0.1.1] - 2026-10-26
+### Added
+- **Matomo Analytics Integration (`templates/base.html`):**
+  - Integrated the self-hosted Matomo tracking script (`https://analytics.dataist.ir/`) into the site's base template for privacy-first visitor and page view analytics.
+- **Ecosystem Tools Update (`data/tools.json`):**
+  - Synchronized and updated the central data registry for ecosystem tools.
+- **Version Management:**
+  - Bumped project version to `v0.1.1`.
+
 ## [v0.1.0] - 2026-09-02
 ### Added
 * **Official Enamad Integration (`base.html`, `style.scss`):**
